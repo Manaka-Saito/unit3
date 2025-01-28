@@ -1,6 +1,6 @@
 # This is quiz 037
 <img width="900" alt="Screenshot 2025-01-28 at 22 54 40" src="https://github.com/user-attachments/assets/35146905-d511-45d9-829e-12e1dc7d1e5c" />
-
+ 
 ## Code
 ### .kv File
 <img width="900" alt="Screenshot 2025-01-29 at 8 49 31" src="https://github.com/user-attachments/assets/e860f21b-aa1c-495c-8b2b-f009c204b165" />
