@@ -1,7 +1,7 @@
 # This is quiz 032
 <img width="1176" alt="Screenshot 2025-01-09 at 18 54 34" src="https://github.com/user-attachments/assets/5c69c030-d8b4-4732-9c57-467dbf66bf5a" />
 
-
+## Paper Work
 
 ## Code
 <img width ="945" alt="Screenshot 2025-01-28 at 19 38 20" src="https://github.com/user-attachments/assets/2a41a694-f28e-4055-a3e4-3fcae6745f40" />
