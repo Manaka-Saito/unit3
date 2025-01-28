@@ -8,6 +8,5 @@
 <img width="943" alt="Screenshot 2025-01-28 at 19 53 36" src="https://github.com/user-attachments/assets/dcddf1a9-4bd4-4c75-ae4a-57817a2539c0" />
 
 
-
 ## Proof of Work
 <img width="1081" alt="Screenshot 2025-01-28 at 19 52 48" src="https://github.com/user-attachments/assets/3887847d-fb54-4d68-a3fd-98f094616694" />
