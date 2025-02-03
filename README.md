@@ -1,10 +1,21 @@
-# have 5-6 success criteria
-## have to be measureable
-## use gy and good coding practices
+## have 5-6 success criteria
+### have to be measureable
+### use gy and good coding practices
+### issue tackled should be there
+
+## one small one medium one complexed for the flow chart
+## list of techniques
+
+### password hashing
+### web sessions
+### sql trigger with complex sql methods
+### automatic email creations
+
+
 
 ![11e470e9022f4fc5b367429bcbb285bc](https://github.com/comsci-uwc-isak/unit2_2023/assets/53995212/1d14b1d3-ae39-4ef3-8ec9-3329630eacae)
 
-# Unit 2: A Distributed Weather Station for ISAK
+# Unit 3: A Restaurant Manager
 
 ## Criteria A: Planning
 
