@@ -71,13 +71,24 @@ _TOK Connection: To what extent does ```the use of data science``` in climate re
 **Fig.3** Fig. 3 System diagram (HL+) for the proposed system to visualize and analyze temperature and humidity data in our campus. Physical variables measured with a network of DHT11/BMP280 sensors locally on a Raspberry Pi. A remote server provides and API for remote monitoring and storage (192.162.6.142) via the ISAK-S network. A laptop for remote work is included.
 
 ## Record of Tasks
-| Task No | Planned Action                                                | Planned Outcome                                                                                                 | Time estimate | Target completion date | Criterion |
-| Task No. | Planned Action                | Planned Outcome                                                                 | Time Estimate (Min) | Target Completion Date | Criterion |
-|----------|-------------------------------|---------------------------------------------------------------------------------|---------------------|------------------------|-----------|
-| 1.       | Meeting with my client        | Consultant with my client to clearly understand the situation know their needs. | 15                  | Jan. 29                | A         |
-| 2.       | Define the problem definition | Write a problem definition to                                                   | 30                  | Feb. 3                 | A         |
-|          |                               |                                                                                 |                     |                        |           |
-## Test Plan
+| Task No. | Planned Action                                      | Planned Outcome                                                                              | Time Estimate (Min) | Target Completion Date | Criterion |
+|----------|-----------------------------------------------------|----------------------------------------------------------------------------------------------|---------------------|------------------------|-----------|
+| 1.       | Meeting with my client                              | Consultant with my client to clearly understand the situation know their needs.              | 15                  | Jan. 29                | A         |
+| 2.       | Define the problem definition                       | Write a problem definition to clarify the problems that needs to be solved.                  | 15                  | Feb. 3                 | A         |
+| 3.       | Propose and finalize a success criteria with client | List all the success criteria and review them with client, getting consensus on all of them. | 30                  | Feb. 5                 | A         |
+| 4.       |                                                     |                                                                                              |                     |                        |           |
+|          |                                                     |                                                                                              |                     |                        |           |
+|          |                                                     |                                                                                              |                     |                        |           |
+|          |                                                     |                                                                                              |                     |                        |           |
+|          |                                                     |                                                                                              |                     |                        |           |
+|          |                                                     |                                                                                              |                     |                        |           |
+|          |                                                     |                                                                                              |                     |                        |           |
+|          |                                                     |                                                                                              |                     |                        |           |
+|          |                                                     |                                                                                              |                     |                        |           |
+|          |                                                     |                                                                                              |                     |                        |           |
+|          |                                                     |                                                                                              |                     |                        |           |
+|          |                                                     |                                                                                              |                     |                        |           |
+|          |                                                     |                                                                                              |                     |                        |           |## Test Plan
 
 # Criteria C: Development (around 1000 word max)
 
