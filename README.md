@@ -21,7 +21,7 @@
 
 ## Problem definition
 
-``` Fill in here```
+My client, T.L., recently opened a local restaurant, Tenzin’s Food, which serves Nepalese food. He is currently advertising his restaurant by putting up posters in local newspapers and distributing them to local people. Additionally, he manages employees and customer information manually resulting in inefficiency in operations. Finally, he takes orders for take away and reservations on call and records manually. He is willing to expand his business and  get more foreign customers or customers from outside of the community. 
 
 ## Proposed Solution
 Considering the client requirements an adequate solution includes a low cost sensing device for humidity and temperature and a custom data script that process and anaysis the samples acquired. For a low cost sensing device an adequate alternative is the DHT11 sensor[^1] which is offered online for less than 5 USD and provides adequare precision and range for the client requirements (Temperature Range: 0°C to 50°C, Humidity Range: 20% to 90%). Similar devices such as the DHT22, AHT20 or the AM2301B [^2] have higher specifications, however the DHT11 uses a simple serial communication (SPI) rather than more eleborated protocols such as the I2C used by the alternatives. For the range, precision and accuracy required in this applicaiton the DHT11 provides the best compromise. Connecting the DHT11 sensor to a computer requires a device that provides a Serial Port communication. A cheap and often used alternative for prototyping is the Arduino UNO microcontroller [^3]. "Arduino is an open-source electronics platform based on easy-to-use hardware and software"[^4]. In additon to the low cost of the Arduino (< 6USD), this devide is programable and expandable[^1]. I considered alternatives such diffeerent versions of the original Arduino but their size and price make them a less adequate solution.
@@ -72,9 +72,11 @@ _TOK Connection: To what extent does ```the use of data science``` in climate re
 
 ## Record of Tasks
 | Task No | Planned Action                                                | Planned Outcome                                                                                                 | Time estimate | Target completion date | Criterion |
-|---------|---------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|---------------|------------------------|-----------|
-| 1       | Write the Problem context                        | 10min         | Nov 22                 | A         |
-
+| Task No. | Planned Action                | Planned Outcome                                                                 | Time Estimate (Min) | Target Completion Date | Criterion |
+|----------|-------------------------------|---------------------------------------------------------------------------------|---------------------|------------------------|-----------|
+| 1.       | Meeting with my client        | Consultant with my client to clearly understand the situation know their needs. | 15                  | Jan. 29                | A         |
+| 2.       | Define the problem definition | Write a problem definition to                                                   | 30                  | Feb. 3                 | A         |
+|          |                               |                                                                                 |                     |                        |           |
 ## Test Plan
 
 # Criteria C: Development (around 1000 word max)
