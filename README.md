@@ -11,9 +11,8 @@
 ### sql trigger with complex sql methods
 ### automatic email creations
 
-
-
-![11e470e9022f4fc5b367429bcbb285bc](https://github.com/comsci-uwc-isak/unit2_2023/assets/53995212/1d14b1d3-ae39-4ef3-8ec9-3329630eacae)
+[![image](https://github.com/user-attachments/assets/a24f3bcd-d713-40ba-b350-8bb862083b09)
+](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.lacademie.com%2Fnepalese-food-guide%2F&psig=AOvVaw3PdlZaKWTHtL134Ew3Xs1D&ust=1739447146860000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCPiKkdyHvosDFQAAAAAdAAAAABAR)
 
 # Unit 3: A Restaurant Manager
 
