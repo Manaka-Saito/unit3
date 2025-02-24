@@ -5,5 +5,9 @@
 
 
 ## Code
+<img width="800" alt="Screenshot 2025-02-25 at 8 47 00" src="https://github.com/user-attachments/assets/e2cc2a52-7c8e-448a-aa43-62daa678e72f" />
+
 
 ## Proof of Work
+
+<img width="800" alt="Screenshot 2025-02-25 at 8 46 37" src="https://github.com/user-attachments/assets/c35acb71-ec0a-4179-adaa-12efbeac92b8" />
