@@ -2,7 +2,7 @@
 <img width="900" alt="Screenshot 2025-02-24 at 23 48 14" src="https://github.com/user-attachments/assets/ecbe57fb-4fca-401a-aa32-011fc8a39fd1" />
 
 ## Paper Work
-
+![IMG_1678](https://github.com/user-attachments/assets/445dda41-3f70-40df-ad20-080600a0a9a9)
 
 ## Code
 ```py
