@@ -2,8 +2,7 @@
 <img width="800" alt="Screenshot 2025-02-24 at 23 44 00" src="https://github.com/user-attachments/assets/32e83042-1494-4a6d-bac4-aeaddddc566b" />
 
 ## ER Diagram / UML Diagram
-
-![IMG_1687](https://github.com/user-attachments/assets/9ba2b561-d3f8-4976-a77d-c7e57fdf0bbd)
+![IMG_1690](https://github.com/user-attachments/assets/c16cd078-a2fb-4d55-8c96-b56690d93240)
 
 ## Code 
 ```py
