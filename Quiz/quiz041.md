@@ -5,7 +5,7 @@
 
 ![IMG_1687](https://github.com/user-attachments/assets/9ba2b561-d3f8-4976-a77d-c7e57fdf0bbd)
 
-## Code
+## Code 
 ```py
 
 import sqlite3
