@@ -4,6 +4,9 @@
 ## Paper Work
 ![IMG_1678](https://github.com/user-attachments/assets/445dda41-3f70-40df-ad20-080600a0a9a9)
 
+## UML Diagram
+![IMG_1680](https://github.com/user-attachments/assets/e9cbdaaf-315d-4cd7-bb45-5b79ebc56d0b)
+
 ## Code
 ```py
 class WordCounter:
