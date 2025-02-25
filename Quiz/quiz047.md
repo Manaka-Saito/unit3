@@ -1,4 +1,4 @@
-# This is quiz 047
+# This is quiz 047 (UML Diagram included in the quiz)
 <img width="800" alt="Screenshot 2025-02-24 at 20 45 52" src="https://github.com/user-attachments/assets/4313daea-4867-4f17-86c5-02d9558fe0ed" />
 
 ## Paper Solution
