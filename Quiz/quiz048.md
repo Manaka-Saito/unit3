@@ -5,7 +5,10 @@
 ## Paper Work
 
 ![IMG_1671](https://github.com/user-attachments/assets/4fe27c22-dda9-4274-9e97-f26ab4fc36e2)
+
+## UML Diagram
  
+![IMG_1679](https://github.com/user-attachments/assets/ea899b06-7bce-443f-bcb4-2177536442d0)
 
 ## Code
 <img width="900" alt="Screenshot 2025-02-24 at 20 35 58" src="https://github.com/user-attachments/assets/bf105ce8-8199-474a-8f4c-8b6ab572a790" />
