@@ -1,4 +1,3 @@
-## have 5-6 success criteria
 ### have to be measureable
 ### use gy and good coding practices
 ### issue tackled should be there
@@ -9,7 +8,6 @@
 ### password hashing
 ### web sessions
 ### sql trigger with complex sql methods
-### automatic email creations
 
 [![image](https://github.com/user-attachments/assets/a24f3bcd-d713-40ba-b350-8bb862083b09)
 ](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.lacademie.com%2Fnepalese-food-guide%2F&psig=AOvVaw3PdlZaKWTHtL134Ew3Xs1D&ust=1739447146860000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCPiKkdyHvosDFQAAAAAdAAAAABAR)
@@ -93,8 +91,8 @@ _TOK Connection: To what extent does ```the use of data science``` in climate re
 
 ## List of techniques used
 
-1. API communication with remote server
-2. Filtering using moving average
+1. 
+2. 
 3. 
 
 ### 1. Filtering using moving average
