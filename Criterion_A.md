@@ -26,11 +26,12 @@ KivyMD will be used to create interactive, well-designed interfaces. SQLite is t
 
 <img width="max" alt="D90E800F-8D54-49F8-A7D0-BEC269D779EE" src="https://github.com/user-attachments/assets/a3f1a254-cfc2-480b-ad8c-6e94bfb135d9" />
 Fig1. *Client's approval for the success criteria*
+
 ## Citation
-[^1]: **"Should You Use CSV, JSON, or SQL?"** *PythonHow*. [https://pythonhow.com/python-tutorial/miscellaneous/csv-json-or-sql/](https://pythonhow.com/python-tutorial/miscellaneous/csv-json-or-sql/).  
-[^2]: Nelson, Carter. **“Modern Replacements for DHT11 and DHT22 Sensors.”** *Adafruit Learning System*. [https://learn.adafruit.com/modern-replacements-for-dht11-dht22-sensors/what-are-better-alternatives](https://learn.adafruit.com/modern-replacements-for-dht11-dht22-sensors/what-are-better-alternatives).  
+[^1]: "Should You Use CSV, JSON, or SQL?" PythonHow. [https://pythonhow.com/python-tutorial/miscellaneous/csv-json-or-sql/](https://pythonhow.com/python-tutorial/miscellaneous/csv-json-or-sql/).  
+[^2]:“MySQL.” Mysql.com, 2024, www.mysql.com/. Accessed 4 Mar. 2024.
 [^3]: Gomez, Jose. **“Web Apps Vs. Desktop Apps: Understanding the Differences.”** *Koombea*, 16 Nov. 2023. [https://www.koombea.com/blog/web-apps-vs-desktop-apps/](https://www.koombea.com/blog/web-apps-vs-desktop-apps/). Accessed 10 Mar. 2024.  
 [^4]: Juviler, Jamie. **“What Is GUI? Graphical User Interfaces, Explained.”** *HubSpot Blog*, 30 Aug. 2023. [https://blog.hubspot.com/website/what-is-gui](https://blog.hubspot.com/website/what-is-gui). Accessed 10 Mar. 2024.  
-[^5]: Tino. **Tino/PyFirmata: Python Interface for the Firmata Protocol.** *GitHub*. [https://github.com/tino/pyFirmata](https://github.com/tino/pyFirmata). Accessed 10 Mar. 2024.  
-[^6]: **"Advantages of Python: Disadvantages of Python."** *Python Geeks*, 26 June 2021. [https://pythongeeks.org/advantages-disadvantages-of-python/](https://pythongeeks.org/advantages-disadvantages-of-python/).  
-[^7]: **"Python vs C++: Selecting the Right Tool for the Job."** *Real Python*, 19 June 2021. [https://realpython.com/python-vs-cpp/#memory-management](https://realpython.com/python-vs-cpp/#memory-management).  
+[^5]: Tino. *Tino/PyFirmata: Python Interface for the Firmata Protocol.GitHub*. [https://github.com/tino/pyFirmata](https://github.com/tino/pyFirmata). Accessed 10 Mar. 2025.  
+[^6]: "Advantages of Python: Disadvantages of Python." Python Geeks, 26 June 2021. [https://pythongeeks.org/advantages-disadvantages-of-python/](https://pythongeeks.org/advantages-disadvantages-of-python/).  
+[^7]: "Python vs C++: Selecting the Right Tool for the Job." Real Python, 19 June 2021. [https://realpython.com/python-vs-cpp/#memory-management](https://realpython.com/python-vs-cpp/#memory-management).  
