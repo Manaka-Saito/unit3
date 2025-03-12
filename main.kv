@@ -1,0 +1,1479 @@
+```
+ScreenManager:
+    id: scr_manager
+
+    SignUpScreen:
+        name: "SignUpScreen"
+
+    LoginScreen:
+        name: "LoginScreen"
+
+    HomeScreen:
+        name: "HomeScreen"
+        # this should contain restaurant info, reputation, ads and info
+
+    MenuScreen:
+        name: "MenuScreen"
+
+    MorningMenu:
+        name: "MorningMenu"
+
+    LunchMenu:
+        name: "LunchMenu"
+
+    DinnerMenu:
+        name: 'DinnerMenu'
+
+    BookingScreen:
+        name: "BookingScreen"
+
+    BookingManagerScreen:
+        name: "BookingManagerScreen"
+
+    EmployeeManagerScreen:
+        name: "EmployeeManagerScreen"
+
+    AdminScreen:
+        name: "AdminScreen"
+
+
+<SignUpScreen>
+    size: 500, 500
+    MDBoxLayout:
+        size_hint: 1, 1
+        md_bg_color: "#F4EBDA"
+        orientation: "vertical"
+        spacing: 15
+
+        FloatLayout:
+            size_hint_y: None
+            height: dp(600)
+
+            Image:
+                source: "Most-Popular-Nepalese-Foods.jpeg"
+                size_hint: 1, 1
+                keep_ratio: True
+                allow_stretch: True
+
+            Widget:
+                canvas.before:
+                    Color:
+                        rgba: 1, 1, 1, .5
+                    Rectangle:
+                        pos: self.pos
+                        size: self.size
+
+        MDLabel:
+            text: "Register"
+            theme_text_color: "Custom"
+            text_color: "#082627"
+            halign: "center"
+            font_size: "70sp"
+            pos_hint: {"center_x": 0.5, 'top': 1}
+
+
+        MDBoxLayout:
+            orientation: 'vertical'
+            size_hint: 1, None
+            height: dp(300)
+            spacing: 5
+
+            MDTextField:
+                id: uname
+                hint_text: "Enter our username"
+                helper_text_mode:"on_error"
+                helper_text :""
+                mode: "fill"
+                icon_left: "rename"
+                size_hint_x: .8
+                pos_hint: {'center_x': .5}
+
+            MDTextField:
+                id: email
+                hint_text: "Enter your email address"
+                helper_text_mode:"on_error"
+                helper_text :""
+                mode: "fill"
+                icon_left: "gmail"
+                validator: "email"
+                size_hint_x: .8
+                pos_hint: {'center_x': .5}
+
+
+            MDTextField:
+                id: passwd
+                hint_text: "Enter your password"
+                helper_text :""
+                mode: "fill"
+                password: True
+                icon_left: "form-textbox-lock"
+                helper_text_mode: "on_error"
+                size_hint_x: .8
+                pos_hint: {'center_x': .5}
+
+            MDTextField:
+                id: passwd_confirm
+                hint_text: "Re-enter your password"
+                helper_text :""
+                mode: "fill"
+                password: True
+                icon_left: "security"
+                helper_text_mode: "on_error"
+                size_hint_x: .8
+                pos_hint: {'center_x': .5}
+
+        MDBoxLayout:
+            size_hint: None, None
+            orientation: "horizontal"
+            spacing: 20
+            height: dp(100)
+            padding: [20, 10]
+
+            MDRaisedButton:
+                text: "Submit"
+                size_hint: None, None
+                size: dp(200), dp(60)
+                md_bg_color: "#E7674C"
+                on_press: root.try_signup()
+
+
+            MDRaisedButton:
+                text: "Login"
+                size_hint: None, None
+                size: dp(200), dp(60)
+                md_bg_color: "#444949"
+                on_press: root.to_login()
+
+## i still need to modify the button size
+#-----------------------------------------------------------------------------------------------------------------------
+<LoginScreen>
+    size: 500, 500
+    MDBoxLayout:
+        size_hint: 1, 1
+        md_bg_color: "#F4EBDA"
+        orientation: "vertical"
+        spacing: 15
+
+        FloatLayout:
+            size_hint_y: None
+            height: dp(600)
+
+            Image:
+                source: "Most-Popular-Nepalese-Foods.jpeg"
+                size_hint: 1, 1
+                keep_ratio: True
+                allow_stretch: True
+
+            Widget:
+                canvas.before:
+                    Color:
+                        rgba: 1, 1, 1, .5
+                    Rectangle:
+                        pos: self.pos
+                        size: self.size
+
+        MDLabel:
+            text: "Login"
+            theme_text_color: "Custom"
+            text_color: "#082627"
+            halign: "center"
+            font_size: "70sp"
+            pos: 250, 400
+
+        MDBoxLayout:
+            orientation: 'vertical'
+            size_hint: 1, None
+            height: dp(300)
+            spacing: 5
+
+            MDTextField:
+                id: uname
+                mode: 'fill'
+                icon_left: 'rename'
+                pos_hint: {'center_x': .5}
+                size_hint_x: .8
+                hint_text: "Enter your username"
+                helper_text_mode:"on_error"
+                helper_text :""
+
+
+            MDTextField:
+                id: passwd
+                mode: "fill"
+                size_hint_x: .8
+                password: True
+                pos_hint: {'center_x': .5}
+                icon_left: "form-textbox-lock"
+                hint_text: "Enter your password"
+                helper_text_mode:"on_error"
+                helper_text :""
+
+        MDBoxLayout:
+            size_hint: None, None
+            orientation: "horizontal"
+            spacing: 20
+            height: dp(100)
+            padding: [20, 10]
+            Widget:
+
+            MDRaisedButton:
+                text: "Login"
+                size_hint: None, None
+                size: dp(200), dp(60)
+                md_bg_color: "#E7674C"
+                pos_hint: {"center_x": .5}
+
+                on_press: root.try_login()
+
+
+            MDRaisedButton:
+                text: "Sign Up"
+                size_hint: None, None
+                size: dp(200), dp(60)
+                md_bg_color: "#444949"
+                pos_hint: {"center_x": .5}
+
+                on_press: root.to_signup()
+
+#-----------------------------------------------------------------------------------------------------------------------
+
+#-----------------------------------------------------------------------------------------------------------------------
+<MenuScreen>:
+    size: 500, 500
+    MDBoxLayout:
+        orientation: "vertical"
+        size_hint: 1,1
+        md_bg_color: "#F1ECEB"
+
+        BoxLayout:
+            orientation: 'vertical'
+            size_hint: 1,.9
+            padding: [0, 20, 0, 0]
+
+            MDLabel:
+                size_hint: 1, .1
+                text: "Menu"
+                text_color: "#363427"
+                elevation: 10
+                font_style: "H3"
+                halign: "center"
+
+            MDBoxLayout:
+                spacing: 30
+                orientation: 'horizontal'
+                padding: 50
+                size_hint: 1, .9
+                halign: "center"
+
+                #Morning_menu
+                MDCard:
+                    on_release: root.morning_show()
+                    size_hint: .33, 1
+                    #morning
+                    FloatLayout:
+                        FitImage:
+                            source: "morning-menu.jpg"
+                            size_hint: 1,1
+                            pos_hint:  {"center_x": .5, "center_y": .5}
+                            opacity: .5
+                        MDLabel:
+                            text: "[b][u]Morning Menu[/u][/b]"
+                            markup: True
+                            bold: True
+                            halign: "center"
+                            valign: "center"
+                            theme_text_color: "Custom"
+                            pos_hint: {"center_x": .5, "center_y": .5}
+                            size_hint: 1, 1
+                            elevation: 2
+                            padding: 20
+                            font_style: "H4"
+
+                MDCard:
+                    on_release: root.lunch_show()
+                    size_hint: .33, 1
+                    #lunch
+                    FloatLayout:
+                        FitImage:
+                            source: "lunch-menu.jpg"
+                            size_hint: 1,1
+                            pos_hint:  {"center_x": .5, "center_y": .5}
+                            opacity: .4
+                        MDLabel:
+                            text: "[b][u]Lunch Menu[/u][/b]"
+                            markup: True
+                            bold: True
+                            halign: "center"
+                            valign: "center"
+                            theme_text_color: "Custom"
+                            pos_hint: {"center_x": .5, "center_y": .5}
+                            size_hint: 1, 1
+                            elevation: 2
+                            padding: 20
+                            font_style: "H4"
+                MDCard:
+                    on_release: root.dinner_show()
+                    size_hint: .33, 1
+                    #morning
+                    FloatLayout:
+                        FitImage:
+                            source: "dinner-menu.jpg"
+                            size_hint: 1,1
+                            pos_hint: {"center_x": .5, "center_y": .5}
+                            opacity: .4
+                        MDLabel:
+                            text: "[b][u]Dinner Menu[/u][/b]"
+                            markup: True
+                            bold: True
+                            halign: "center"
+                            valign: "center"
+                            theme_text_color: "Custom"
+                            pos_hint: {"center_x": .5, "center_y": .5}
+                            size_hint: 1, 1
+                            elevation: 2
+                            padding: 20
+                            font_style: "H4"
+            MDBoxLayout:
+                orientation: 'horizontal'
+                padding: "10dp"
+                spacing: "20dp"
+                size_hint: 1, .1
+                mg_bg_color: app.theme_cls.primary_color
+                height: "50dp"
+                pos_hint: {"center_x": 0.5}
+
+                MDRaisedButton:
+                    icon: "home"
+                    text: "Home"
+                    size_hint: None, None
+                    size: "100dp", "50dp"
+                    md_bg_color: [1, 1, 1, 1]
+                    text_color: app.theme_cls.primary_color
+                    on_release: root.to_home()
+
+                MDRaisedButton:
+                    icon: "menu"
+                    text: "Menu"
+                    size_hint: None, None
+                    size: "100dp", "50dp"
+                    md_bg_color: [1, 1, 1, 1]
+                    text_color: app.theme_cls.primary_color
+                    on_release: root.to_menu()
+
+                MDRaisedButton:
+                    icon: "food-fork-drink"
+                    text: "Booking"
+                    size_hint: None, None
+                    size: "100dp", "50dp"
+                    md_bg_color: [1, 1, 1, 1]
+                    text_color: app.theme_cls.primary_color
+                    on_release: root.to_booking()
+
+                MDRaisedButton:
+                    icon: "Logout"
+                    text: "Logout"
+                    size_hint: None, None
+                    size: "100dp", "50dp"
+                    md_bg_color: [1, 1, 1, 1]
+                    text_color: app.theme_cls.primary_color
+                    on_release: root.to_logout()
+#-----------------------------------------------------------------------------------------------------------------------
+<MorningMenu>
+    size: 500, 500
+    MDScrollView:
+        MDBoxLayout:
+            orientation: "vertical"
+            size_hint_y: None
+            height: self.minimum_height
+            spacing: 10
+            md_bg_color: "#F1ECEB"
+
+
+            # Menu_label
+            MDLabel:
+                size_hint: 1, None
+                text: "Morning Menu"
+                elevation: 10
+                font_style: "H3"
+                halign: "center"
+
+            # Menu
+            BoxLayout:
+                orientation: 'horizontal'
+                height: self.minimum_height
+                size_hint: 1, None
+
+                GridLayout:
+                    cols: 2
+                    padding: [10, 10, 10, 10]
+                    spacing: 10
+                    size_hint_y: None
+                    height: self.minimum_height
+                    pos_hint_x: .5
+
+                    #1st Dish-------------------------------------------------------------------------------------------
+                    MDCard:
+                        size_hint: .4, None #要確認
+                        height: "300dp"
+                        pos_hint: {"center_x": .5}
+                        orientation: "vertical"
+                        md_bg_color: "#F8EFE5"
+
+                        Image:
+                            source: 'aloo-paratha.jpg'
+                            size_hint: 1, .8
+                            keep_ratio: True
+
+                        MDLabel:
+                            markup: True
+                            text: "[b]Aloo Paratha[/b]\n¥600\nAllergy Info: Gulten Dairy, Potato"
+                            font_style: "H6"
+                            theme_text_color: "Primary"
+                            halign: "center"
+
+                        GridLayout:
+                            cols: 2
+                            size_hint_y: None
+                            height: "30dp"
+                            padding: [5,5,5,5]
+
+                            MDIcon:
+                                icon: 'leaf'
+                                size_hint: .3,.1
+
+                            MDIcon:
+                                icon: 'star-circle'
+                                size_hint: .3, .1
+
+                    #2nd Dish-------------------------------------------------------------------------------------------
+                    MDCard:
+                        size_hint: .4, None #要確認
+                        height: "300dp"
+                        pos_hint: {"center_x": .5}
+                        orientation: "vertical"
+                        md_bg_color: "#F8EFE5"
+
+                        Image:
+                            source: 'momo.jpg'
+                            size_hint: 1, .65
+
+                        MDLabel:
+                            text: "[b]Momo[/b]\n¥550\nAllergy Info: Gluten, Soy, Sesame, Meat (if non-vegetarian)\nHalal Option/Vegetarian Option Available"
+                            font_style: "H6"
+                            theme_text_color: "Primary"
+                            markup: True
+                            halign: "center"
+
+                        GridLayout:
+                            cols: 2
+                            size_hint_y: None
+                            height: "30dp"
+                            padding: [5,5,5,5]
+                            halign: "center"
+
+                            MDIcon:
+                                icon: 'leaf'
+                                size_hint: .3,.1
+
+                            MDIcon:
+                                icon: 'star-circle'
+                                size_hint: .3, .1
+
+                    #3rd Dish-------------------------------------------------------------------------------------------
+                    MDCard:
+                        size_hint: .4, None #要確認
+                        height: "300dp"
+                        pos_hint: {"center_x": .5}
+                        orientation: "vertical"
+                        md_bg_color: "#F8EFE5"
+
+                        Image:
+                            source: 'chiya.jpg'
+                            size_hint: 1, .65
+
+                        MDLabel:
+                            text: "[b]Chiya[/b]\n¥300\nAllergy Info: Dairy"
+                            font_style: "H6"
+                            theme_text_color: "Primary"
+                            markup: True
+                            halign: "center"
+
+                        GridLayout:
+                            cols: 2
+                            size_hint_y: None
+                            height: "30dp"
+                            padding: [5,5,5,5]
+                            halign: "center"
+                            MDIcon:
+                                icon: 'leaf'
+                                size_hint: .3, .1
+
+                            MDIcon:
+                                icon: 'star-circle'
+                                size_hint: .3, .1
+
+                    #4th Dish-------------------------------------------------------------------------------------------
+                    MDCard:
+                        size_hint: .4, None #要確認
+                        height: "300dp"
+                        pos_hint: {"center_x": .5}
+                        orientation: "vertical"
+                        md_bg_color: "#F8EFE5"
+
+                        Image:
+                            source: 'sukuti.jpg'
+                            size_hint: 1, .65
+
+                        MDLabel:
+                            text: "[b]Sukuti[/b]\n ¥800\nAllergy Info: Soy, Meat"
+                            font_style: "H6"
+                            theme_text_color: "Primary"
+                            markup: True
+                            halign: "center"
+
+                        GridLayout:
+                            cols: 2
+                            size_hint_y: None
+                            height: "30dp"
+                            padding: [5,5,5,5]
+                            halign: "center"
+
+                            MDIcon:
+                                icon: 'star-circle'
+                                size_hint: .3, .1
+
+            MDBoxLayout:
+                orientation: "horizontal"
+                size_hint_y: None
+                height: "50dp"
+                spacing: 10
+                padding: [20, 20, 20, 20]
+                MDIcon:
+                    icon: 'circle-slice-8'
+                    halign: 'center'
+                MDLabel:
+                    text: "Gluten-Free"
+                    halign: "center"
+                    theme_text_color: "Primary"
+
+                MDIcon:
+                    icon: 'leaf'
+                    halign: 'center'
+                MDLabel:
+                    text: 'Vegetarian Food'
+                    halign: "center"
+                    theme_text_color: "Primary"
+
+                MDIcon:
+                    icon: 'star-circle'
+                    halign: "center"
+                MDLabel:
+                    text: 'Halal'
+                    halign: "center"
+                    theme_text_color: "Primary"
+
+            #go back to menu
+            MDIconButton:
+                icon: "arrow-left"
+                size_hint: None, None
+                on_release: root.go_back_menu()
+
+#-----------------------------------------------------------------------------------------------------------------------
+<LunchMenu>
+    size: 500, 500
+
+    MDScrollView:
+        MDBoxLayout:
+            orientation: "vertical"
+            size_hint_y: None
+            height: self.minimum_height
+            spacing: 10
+            md_bg_color: "#F1ECEB"
+
+            # Menu_label
+            MDLabel:
+                size_hint: 1, None
+                text: "Lunch Menu"
+                elevation: 10
+                font_style: "H3"
+                halign: "center"
+
+            # Menu
+            BoxLayout:
+                orientation: 'horizontal'
+                height: self.minimum_height
+                size_hint: 1, None
+
+                GridLayout:
+                    cols: 2
+                    padding: [10, 10, 10, 10]
+                    spacing: 10
+                    size_hint_y: None
+                    height: self.minimum_height
+                    pos_hint_x: .5
+
+                    #1st Dish-------------------------------------------------------------------------------------------
+                    MDCard:
+                        size_hint: .4, None #要確認
+                        height: "300dp"
+                        pos_hint: {"center_x": .5}
+                        orientation: "vertical"
+                        md_bg_color: "#F8EFE5"
+
+                        Image:
+                            source: 'dal_bhat_tarkari.jpeg'
+                            size_hint: 1, .8
+                            keep_ratio: True
+
+                        MDLabel:
+                            markup: True
+                            text: "[b]Dal Bhat Tarkari[/b]\n¥1,200\nAllergy Info: Lentils, Soy, Gluten"
+                            font_style: "H6"
+                            theme_text_color: "Primary"
+                            halign: "center"
+
+
+                    #2nd Dish-------------------------------------------------------------------------------------------
+                    MDCard:
+                        size_hint: .4, None #要確認
+                        height: "300dp"
+                        pos_hint: {"center_x": .5}
+                        orientation: "vertical"
+                        md_bg_color: "#F8EFE5"
+
+                        Image:
+                            source: 'sel_roti.jpeg'
+                            size_hint: 1, .65
+
+                        MDLabel:
+                            text: "[b]Sel Roti[/b]\n¥400\nAllergy Info: Gluten, Dairy\nHalal Option/Vegetarian Option Available"
+                            font_style: "H6"
+                            theme_text_color: "Primary"
+                            markup: True
+                            halign: "center"
+
+                        GridLayout:
+                            cols: 2
+                            size_hint_y: None
+                            height: "30dp"
+                            padding: [5,5,5,5]
+                            halign: "center"
+
+                            MDIcon:
+                                icon: 'leaf'
+                                size_hint: .3,.1
+
+                            MDIcon:
+                                icon: 'star-circle'
+                                size_hint: .3, .1
+
+                    #3rd Dish-------------------------------------------------------------------------------------------
+                    MDCard:
+                        size_hint: .4, None #要確認
+                        height: "300dp"
+                        pos_hint: {"center_x": .5}
+                        orientation: "vertical"
+                        md_bg_color: "#F8EFE5"
+
+                        Image:
+                            source: 'chow_mein.jpeg'
+                            size_hint: 1, .65
+
+                        MDLabel:
+                            text: "[b]Chow mein[/b]\n¥1,000\nAllergy Info: Gluten, Soy, Sesame, Chicken"
+                            font_style: "H6"
+                            theme_text_color: "Primary"
+                            markup: True
+                            halign: "center"
+
+                        GridLayout:
+                            cols: 2
+                            size_hint_y: None
+                            height: "30dp"
+                            padding: [5,5,5,5]
+                            halign: "center"
+                            MDIcon:
+                                icon: 'leaf'
+                                size_hint: .3, .1
+
+                    #4th Dish-------------------------------------------------------------------------------------------
+                    MDCard:
+                        size_hint: .4, None #要確認
+                        height: "300dp"
+                        pos_hint: {"center_x": .5}
+                        orientation: "vertical"
+                        md_bg_color: "#F8EFE5"
+
+                        Image:
+                            source: 'lassi.jpg'
+                            size_hint: 1, .65
+
+                        MDLabel:
+                            text: "[b]Lassi[/b]\n ¥500\nAllergy Info: Diary"
+                            font_style: "H6"
+                            theme_text_color: "Primary"
+                            markup: True
+                            halign: "center"
+
+                        GridLayout:
+                            cols: 2
+                            size_hint_y: None
+                            height: "30dp"
+                            padding: [5,5,5,5]
+                            halign: "center"
+
+                            MDIcon:
+                                icon: 'star-circle'
+                                size_hint: .3, .1
+                            MDIcon:
+                                icon: 'leaf'
+                                size_hint: .3, .1
+
+            MDBoxLayout:
+                orientation: "horizontal"
+                size_hint_y: None
+                height: "50dp"
+                spacing: 10
+                padding: [20, 20, 20, 20]
+                MDIcon:
+                    icon: 'circle-slice-8'
+                    halign: 'center'
+                MDLabel:
+                    text: "Gluten-Free"
+                    halign: "center"
+                    theme_text_color: "Primary"
+
+                MDIcon:
+                    icon: 'leaf'
+                    halign: 'center'
+                MDLabel:
+                    text: 'Vegetarian Food'
+                    halign: "center"
+                    theme_text_color: "Primary"
+
+                MDIcon:
+                    icon: 'star-circle'
+                    halign: "center"
+                MDLabel:
+                    text: 'Halal'
+                    halign: "center"
+                    theme_text_color: "Primary"
+
+                #go back to menu
+            MDIconButton:
+                icon: "arrow-left"
+                size_hint: None, None
+                on_release: root.go_back_menu()
+#-----------------------------------------------------------------------------------------------------------------------
+<DinnerMenu>
+    size: 500, 500
+
+    MDScrollView:
+        MDBoxLayout:
+            orientation: "vertical"
+            size_hint_y: None
+            height: self.minimum_height
+            spacing: 10
+            md_bg_color: "#F1ECEB"
+
+            # Menu_label
+            MDLabel:
+                size_hint: 1, None
+                text: "Dinner Menu"
+                elevation: 10
+                font_style: "H3"
+                halign: "center"
+
+            # Menu
+            BoxLayout:
+                orientation: 'vertical'
+                height: self.minimum_height
+                size_hint: 1, None
+
+                GridLayout:
+                    cols: 2
+                    padding: [10, 10, 10, 10]
+                    spacing: 10
+                    size_hint_y: None
+                    height: self.minimum_height
+                    pos_hint_x: .5
+
+                    #1st Dish-------------------------------------------------------------------------------------------
+                    MDCard:
+                        size_hint: .4, None #要確認
+                        height: "300dp"
+                        pos_hint: {"center_x": .5}
+                        orientation: "vertical"
+                        md_bg_color: "#F8EFE5"
+
+                        Image:
+                            source: 'thukpa.jpeg'
+                            size_hint: 1, .8
+                            keep_ratio: True
+
+                        MDLabel:
+                            markup: True
+                            text: "[b]Thukpa[/b]\n¥1,500\nAllergy Info: Gluten, Soy, Sesame, Meat"
+                            font_style: "H6"
+                            theme_text_color: "Primary"
+                            halign: "center"
+
+
+                    #2nd Dish-------------------------------------------------------------------------------------------
+                    MDCard:
+                        size_hint: .4, None #要確認
+                        height: "300dp"
+                        pos_hint: {"center_x": .5}
+                        orientation: "vertical"
+                        md_bg_color: "#F8EFE5"
+
+                        Image:
+                            source: 'gundruk.jpeg'
+                            size_hint: 1, .65
+
+                        MDLabel:
+                            text: "[b]Gundruk and Buckwheat Dhido[/b]\n¥1,000\nAllergy Info: N/A"
+                            font_style: "H6"
+                            theme_text_color: "Primary"
+                            markup: True
+                            halign: "center"
+
+                        GridLayout:
+                            cols: 2
+                            size_hint_y: None
+                            height: "30dp"
+                            padding: [5,5,5,5]
+                            halign: "center"
+
+                            MDIcon:
+                                icon: 'leaf'
+                                size_hint: .3,.1
+
+                            MDIcon:
+                                icon: 'star-circle'
+                                size_hint: .3, .1
+
+                    #3rd Dish-------------------------------------------------------------------------------------------
+                    MDCard:
+                        size_hint: .4, None #要確認
+                        height: "300dp"
+                        pos_hint: {"center_x": .5}
+                        orientation: "vertical"
+                        md_bg_color: "#F8EFE5"
+
+                        Image:
+                            source: 'curry.jpeg'
+                            size_hint: 1, .65
+
+                        MDLabel:
+                            text: "[b]Yak Meat Curry[/b]\n¥1,400\nAllergy Info: Soy, Meat, Spices"
+                            font_style: "H6"
+                            theme_text_color: "Primary"
+                            markup: True
+                            halign: "center"
+
+                        GridLayout:
+                            cols: 2
+                            size_hint_y: None
+                            height: "30dp"
+                            padding: [5,5,5,5]
+                            halign: "center"
+                            MDIcon:
+                                icon: 'circle-slice-8'
+                                size_hint: .3, .1
+
+                    #4th Dish-------------------------------------------------------------------------------------------
+                    MDCard:
+                        size_hint: .4, None #要確認
+                        height: "300dp"
+                        pos_hint: {"center_x": .5}
+                        orientation: "vertical"
+                        md_bg_color: "#F8EFE5"
+
+                        Image:
+                            source: 'aloo-gobi.jpeg'
+                            size_hint: 1, .65
+
+                        MDLabel:
+                            text: "[b]Aloo Gobi[/b]\n ¥1,000\nAllergy Info: N/A"
+                            font_style: "H6"
+                            theme_text_color: "Primary"
+                            markup: True
+                            halign: "center"
+
+                        GridLayout:
+                            cols: 2
+                            size_hint_y: None
+                            height: "30dp"
+                            padding: [10,10,10,10]
+                            halign: "center"
+
+
+                            MDIcon:
+                                icon: 'circle-slice-8'
+                                size_hint: .3, .1
+
+                            MDIcon:
+                                icon: 'leaf'
+                                size_hint: .3, .1
+
+            MDBoxLayout:
+                orientation: "horizontal"
+                size_hint_y: None
+                height: "50dp"
+                spacing: 10
+                padding: [20, 20, 20, 20]
+                MDIcon:
+                    icon: 'circle-slice-8'
+                    halign: 'center'
+                MDLabel:
+                    text: "Gluten-Free"
+                    halign: "center"
+                    theme_text_color: "Primary"
+
+                MDIcon:
+                    icon: 'leaf'
+                    halign: 'center'
+                MDLabel:
+                    text: 'Vegetarian Food'
+                    halign: "center"
+                    theme_text_color: "Primary"
+
+                MDIcon:
+                    icon: 'star-circle'
+                    halign: "center"
+                MDLabel:
+                    text: 'Halal'
+                    halign: "center"
+                    theme_text_color: "Primary"
+
+                #go back to menu
+            MDIconButton:
+                icon: "arrow-left"
+                size_hint: None, None
+                on_release: root.go_back_menu()
+
+#-----------------------------------------------------------------------------------------------------------------------
+<BookingScreen>
+    size: 500, 500
+    name: "booking_screen"
+    MDBoxLayout:
+        orientation: 'vertical'
+        spacing: 10
+        padding: [10, 10, 10, 10]
+        md_bg_color: "#F1ECEB"
+
+        # Title Section
+        MDLabel:
+            text: "Make a Reservation"
+            font_style: "H3"
+            halign: "center"
+            theme_text_color: "Primary"
+            size_hint_y: None
+            height: "50dp"
+            pos_hint: {'center_x': .5, 'center_y': .8}
+
+        MDBoxLayout:
+            orientation: 'horizontal'
+            spacing: "10dp"
+            padding: [10, 10, 10, 20]
+
+            MDTextField:
+                id: first_name
+                hint_text: "First Name"
+                mode: "rectangle"
+                icon_right: "account"
+                size_hint_x: 0.33
+
+            MDTextField:
+                id: last_name
+                hint_text: "Last Name"
+                mode: "rectangle"
+                icon_right: "account"
+                size_hint_x: 0.33
+
+            MDTextField:
+                id: phone_number
+                hint_text: "Phone Number"
+                mode: "rectangle"
+                icon_right: "phone"
+                max_text_length: 15
+                helper_text_mode:"on_error"
+                helper_text :""
+                size_hint_x: 0.33
+
+        MDBoxLayout:
+            orientation: "horizontal"
+            spacing: "10dp"
+
+
+        # Date and Time Pickers
+            MDBoxLayout:
+                orientation: 'vertical'
+                padding: "10dp"
+                md_bg_color: app.theme_cls.primary_light
+                radius: [20]
+
+                MDLabel:
+                    text: "Guests"
+                    theme_text_color: "Secondary"
+                    halign: "center"
+
+                MDRaisedButton:
+                    id: guests_button
+                    text: "Select Guests"
+                    size_hint: None, None
+                    size: "190dp", "600dp"
+                    on_release: root.guest_menu.open()
+
+            MDBoxLayout:
+                orientation: 'vertical'
+                padding: "10dp"
+                radius: [20]
+                md_bg_color: app.theme_cls.primary_light
+
+                MDLabel:
+                    text: "Date"
+                    theme_text_color: "Secondary"
+                    halign: "center"
+
+                MDRaisedButton:
+                    id: date_button
+                    text: "Select Date"
+                    size_hint: None, None
+                    size: "190dp", "600dp"
+                    on_release: root.show_date_picker()
+
+            MDBoxLayout:
+                orientation: 'vertical'
+                padding: "10dp"
+                md_bg_color: app.theme_cls.primary_light
+                radius: [20]
+
+                MDLabel:
+                    text: "Time"
+                    theme_text_color: "Secondary"
+                    halign: "center"
+
+                MDRaisedButton:
+                    id: time_button
+                    text: "Select Time"
+                    size_hint: None, None
+                    size: "190dp", "600dp"
+                    on_release: root.time_menu.open()
+
+        MDBoxLayout:
+            orientation: 'horizontal'
+            size_hint_y: None
+            height: "50dp"
+            padding: "10dp"
+            spacing: 10
+
+            MDLabel:
+                text: "Choose Seating Type:"
+                theme_text_color: "Secondary"
+                size_hint_x: .3
+
+            MDSegmentedControl:
+                id: selected_item
+                size_hint_x: .4
+                on_active: root.segment_active(*args)
+
+                MDSegmentedControlItem:
+                    text: "Counter"
+
+                MDSegmentedControlItem:
+                    text: "Table"
+
+        MDLabel:
+            id: availability
+            halign: "center"
+            theme_text_color: "Custom"
+            text_color: app.theme_cls.primary_color
+            text: "Pick the date and time for the availability."
+
+        MDBoxLayout:
+            orientation: "horizontal"
+            spacing: 40
+            height: "150dp"
+            pos_hint: {"center_x": .8}
+
+            MDRaisedButton:
+                id: book_submit
+                text: "Submit"
+                size_hint: None, None
+                size: "150dp", "100dp"
+                md_bg_color: '#6200EE'
+                on_release: root.submit_booking()
+
+            MDRaisedButton:
+                text: "Cancel"
+                size_hint: None, None
+                size: "150dp", "100dp"
+                md_bg_color: '#FF3333'
+                on_release: root.cancel_book()
+
+            MDRaisedButton:
+                text: "See my reservation"
+                size_hint: None, None
+                size: "150dp", "100dp"
+                md_bg_color: '#6A9F6E'
+                on_release: root.show_reservation_popup()
+
+        MDBoxLayout:
+            orientation: 'horizontal'
+            padding: "10dp"
+            spacing: "20dp"
+            mg_bg_color: app.theme_cls.primary_color
+            height: "50dp"
+
+            MDRaisedButton:
+                icon: "home"
+                text: "Home"
+                size_hint: None, None
+                size: "100dp", "50dp"
+                md_bg_color: [1, 1, 1, 1]
+                text_color: app.theme_cls.primary_color
+                on_release: root.to_home()
+
+            MDRaisedButton:
+                icon: "menu"
+                text: "Menu"
+                size_hint: None, None
+                size: "100dp", "50dp"
+                md_bg_color: [1, 1, 1, 1]
+                text_color: app.theme_cls.primary_color
+                on_release: root.to_menu()
+
+            MDRaisedButton:
+                icon: "food-fork-drink"
+                text: "Booking"
+                size_hint: None, None
+                size: "100dp", "50dp"
+                md_bg_color: [1, 1, 1, 1]
+                text_color: app.theme_cls.primary_color
+                on_release: root.to_booking()
+
+            MDRaisedButton:
+                icon: "Logout"
+                text: "Logout"
+                size_hint: None, None
+                size: "100dp", "50dp"
+                md_bg_color: [1, 1, 1, 1]
+                text_color: app.theme_cls.primary_color
+                on_release: root.to_logout()
+
+#-----------------------------------------------------------------------------------------------------------------------
+<HomeScreen>
+    size: 500, 500
+    MDBoxLayout:
+        orientation: "vertical"
+        size_hint: 1,1
+        md_bg_color: "#F1ECEB"
+
+#        Navigation:
+#            size_hint: .1, 1
+        MDBoxLayout:
+            size_hint: 1,.9
+            md_bg_color: "#F1ECEB"
+            orientation: "vertical"
+            spacing: 15
+
+            BoxLayout:
+                orientation: 'vertical'
+                size_hint: 1, .4
+                Image:
+                    source: "home_tenzin.jpg"
+                    allow_stretch: True
+                    keep_ratio: True
+                    size_hint: .5, .5
+                    pos_hint: {"center_x": 0.5, "center_y": 0.8}
+
+            MDBoxLayout:
+                orientation: "vertical"
+                pos_hint: {"center_x": .5, "center_y": .6}
+
+
+                MDLabel:
+                    text: "TENZIN'S KITCHEN"
+                    size_hint_y: None
+                    font_size: '48sp'
+                    bold: True
+                    halign: 'center'
+                    font_name: 'Montaga-Regular.ttf'
+
+                MDLabel:
+                    text: "Enjoy your amazing food experience from the heart of Karuizawa"
+                    size_hint_y: None
+                    font_size: "24sp"
+                    halign: 'center'
+                    font_name: 'Montaga-Regular.ttf'
+
+                MDLabel:
+                    text: "About Us"
+                    font_style: "H4"
+                    size_hint_y: None
+                    height: "35dp"
+                    padding: [10,10,10,10]
+                    font_name: 'Montaga-Regular.ttf'
+                    theme_text_color: "Primary"
+
+                MDLabel:
+                    text: "      With fresh, locally sourced ingredients from this picturesque town, Tenzin's Kitchen is an all-day dining destination offering authentic Nepalese cuisine. Our chefs bring the rich flavors of Nepal to life using traditional techniques, creating dishes that are both comforting and exciting. From aromatic curries to freshly baked naan, each dish is carefully crafted to capture the essence of Nepalese hospitality. Experience a harmonious blend of bold spices and fresh produce, all set against the serene natural beauty of Karuizawa."
+                    font_size: '15dp'
+
+                    font_name: 'Montaga-Regular.ttf'
+
+
+        MDBoxLayout:
+            orientation: 'horizontal'
+            padding: "10dp"
+            spacing: "20dp"
+            size_hint: 1, .1
+            mg_bg_color: app.theme_cls.primary_color
+            height: "50dp"
+
+            MDRaisedButton:
+                icon: "home"
+                text: "Home"
+                size_hint: None, None
+                size: "150dp", "50dp"
+                md_bg_color: [1, 1, 1, 1]
+                text_color: app.theme_cls.primary_color
+                on_release: root.to_home()
+
+            MDRaisedButton:
+                icon: "menu"
+                text: "Menu"
+                size_hint: None, None
+                size: "150dp", "50dp"
+                md_bg_color: [1, 1, 1, 1]
+                text_color: app.theme_cls.primary_color
+                on_release: root.to_menu()
+
+            MDRaisedButton:
+                icon: "food-fork-drink"
+                text: "Booking"
+                size_hint: None, None
+                size: "150dp", "50dp"
+                md_bg_color: [1, 1, 1, 1]
+                text_color: app.theme_cls.primary_color
+                on_release: root.to_booking()
+
+            MDRaisedButton:
+                icon: "Logout"
+                text: "Logout"
+                size_hint: None, None
+                size: "150dp", "50dp"
+                md_bg_color: [1, 1, 1, 1]
+                text_color: app.theme_cls.primary_color
+                on_release: root.to_logout()
+
+#-----------------------------------------------------------------------------------------------------------------------
+<BookingManagerScreen>:
+    MDLabel:
+        pos_hint: {"center_x": .5, 'center_y': .9}
+        halign: "center"
+        text: 'Reservation Info'
+        font_style: 'H2'
+        size_hint: .8, .08 # width, height
+
+
+    MDBoxLayout:
+        orientation: 'horizontal'
+        size_hint:  .8,.08
+        pos_hint: {"center_x": .5, 'center_y': .2}
+        spacing: 5
+
+        MDRaisedButton:
+            id: delete
+            text: "Delete Reservation"
+            on_press: root.delete(self)
+
+
+    MDBoxLayout:
+        orientation: 'horizontal'
+        size_hint:  .8,.08
+        pos_hint: {"center_x": .5, 'center_y': .1}
+        spacing: 30
+        padding: [10, 10, 10,10]
+
+        MDRaisedButton:
+            text: "Book Database"
+            size_hint: None, None
+            size: "150dp", "50dp"
+            md_bg_color: [1, 1, 1, 1]
+            pos_hint_x: .33
+            text_color: app.theme_cls.primary_color
+            on_release: root.to_book_data()
+
+
+        MDRaisedButton:
+            text: "Employee Database"
+            size_hint: None, None
+            size: "150dp", "50dp"
+            md_bg_color: [1, 1, 1, 1]
+            pos_hint_x: .66
+            text_color: app.theme_cls.primary_color
+            on_release: root.to_employee_data()
+
+        MDRaisedButton:
+            icon: "Logout"
+            text: "Logout"
+            size_hint: None, None
+            size: "150dp", "50dp"
+            md_bg_color: [1, 1, 1, 1]
+            text_color: app.theme_cls.primary_color
+            on_release: root.to_logout()
+
+#-----------------------------------------------------------------------------------------------------------------------
+<AdminScreen>
+    size: 500, 500
+    size: 500, 500
+    MDBoxLayout:
+        size_hint: 1, None
+        md_bg_color: "#F4EBDA"
+        orientation: "vertical"
+        spacing: 15
+
+        FloatLayout:
+            size_hint_y: None
+            height: dp(600)
+
+            Image:
+                source: "Most-Popular-Nepalese-Foods.jpeg"
+                size_hint: 1, 1
+                keep_ratio: True
+                allow_stretch: True
+
+            Widget:
+                canvas.before:
+                    Color:
+                        rgba: 1, 1, 1, .5
+                    Rectangle:
+                        pos: self.pos
+                        size: self.size
+
+        MDLabel:
+            text: "Welcome Back!!"
+            theme_text_color: "Custom"
+            text_color: "#082627"
+            halign: "center"
+            font_size: "70sp"
+            pos_hint: {"center_x": 0.5, 'top': 1}
+
+
+        MDBoxLayout:
+            orientation: 'horizontal'
+            size_hint: None, None
+            height: dp(300)
+            spacing: 5
+            pos_hint_y: .2
+            spacing: 30
+            padding: [100, 10, 10, 10]
+            pos_hint_x: .2
+
+            MDRaisedButton:
+                text: "Book Database"
+                size_hint: None, None
+                size: "150dp", "50dp"
+                md_bg_color: [1, 1, 1, 1]
+                pos_hint: {"center_x": .5, 'top': .2}
+                text_color: app.theme_cls.primary_color
+                on_release: root.to_book_data()
+
+
+            MDRaisedButton:
+                text: "Employee Database"
+                size_hint: None, None
+                size: "150dp", "50dp"
+                md_bg_color: [1, 1, 1, 1]
+                pos_hint: {"center_x": .5, 'top': .2}
+                text_color: app.theme_cls.primary_color
+                on_release: root.to_employee_data()
+
+            MDRaisedButton:
+                icon: "Logout"
+                text: "Logout"
+                size_hint: None, None
+                size: "150dp", "50dp"
+                md_bg_color: [1, 1, 1, 1]
+                pos_hint: {"center_x": .5, 'top': .2}
+                text_color: app.theme_cls.primary_color
+                on_release: root.to_logout()
+#-----------------------------------------------------------------------------------------------------------------------
+<EmployeeManagerScreen>
+    size: 500,500
+    MDLabel:
+        pos_hint: {"center_x": .5, "center_y": .9}
+        halign: "center"
+        text: "Employee Manager"
+        font_style: 'H2'
+        size_hint: .8, .08 # width, height
+
+    MDBoxLayout:
+        orientation: "horizontal"
+        size_hint: .8, .08
+        pos_hint: {"center_x": .5, 'center_y': .2}
+        spacing: 5
+
+        MDTextField:
+            id: name
+            size_hint_x: .2
+            hint_text: "Full Name"
+            helper_text_mode: "on_error"
+
+        MDTextField:
+            id: email
+            size_hint_x: .2
+            hint_text: 'Email'
+            helper_text_mode: "on_error"
+
+
+        MDRaisedButton:
+            text: "Save"
+            on_release: root.save()
+            spacing: '10dp'
+        MDRaisedButton:
+            text: "Delete"
+            md_bg_color: "#EB6946"
+            on_release: root.delete(self)
+
+
+
+    MDBoxLayout:
+        orientation: 'horizontal'
+        size_hint: None, None
+        pos_hint: {"center_x": .1, 'center_y': .1}
+        spacing: 30
+
+
+        MDRaisedButton:
+            text: "Book Database"
+            size_hint: None, None
+            size: "150dp", "50dp"
+            md_bg_color: [1, 1, 1, 1]
+            pos_hint_x: .33
+            text_color: app.theme_cls.primary_color
+            on_release: root.to_book_data()
+
+
+        MDRaisedButton:
+            text: "Employee Database"
+            size_hint: None, None
+            size: "150dp", "50dp"
+            md_bg_color: [1, 1, 1, 1]
+            pos_hint_x: .66
+            text_color: app.theme_cls.primary_color
+            on_release: root.to_employee_data()
+
+        MDRaisedButton:
+            icon: "Logout"
+            text: "Logout"
+            size_hint: None, None
+            size: "150dp", "50dp"
+            md_bg_color: [1, 1, 1, 1]
+            text_color: app.theme_cls.primary_color
+            on_release: root.to_logout()
+
+```
