@@ -16,11 +16,11 @@ KivyMD will be used to create interactive, well-designed interfaces. SQLite is t
 ## Success Criteria
 
 
-1. The solution has a login and sign-up system for users and distinguishes if it is either a customer or admin -> ```** [Issue tacled] **: he manages both his employer and customer information on paper which requires him to spend hours to manage his business```
-2. The solution allows customers to browse the menu and information of the restaurant```** [Issue tacled] **: he is advertising his restaurant by putting up posters in local newspapers and at the front of his restaurant. However, he finds this not impactful since it is only to be reached to local people…```
-3. The solution allows the users to make a reservation for the restaurant ```** [Issue tacled] **: he needs to find another way of managing reservations soon```
-4. The solution allows users to add and delete the employee information. ```** [Issue tacled] **: he manages both his employer and customer information on paper which requires him to spend hours to manage his business.```
-5. The solution allows users to delete the booking when cancelation happens. ```** [Issue tacled] **: he struggles to organize the reservations as they records every bookings on paper```
+1. The solution has a login and sign-up system for users and distinguishes if it is either a customer or admin.```** [Issue tacled] **: he manages both his employer and customer information on paper which requires him to spend hours to manage his business```
+2. The solution allows customers to browse the menu and information of the restaurant.```** [Issue tacled] **: he is advertising his restaurant by putting up posters in local newspapers and at the front of his restaurant. However, he finds this not impactful since it is only to be reached to local people…```
+3. The solution allows the users to make a reservation for the restaurant.```** [Issue tacled] **: he needs to find another way of managing reservations soon```
+4. The solution allows users to add and delete the employee information when they are admin. ```** [Issue tacled] **: he manages both his employer and customer information on paper which requires him to spend hours to manage his business.```
+5. The solution allows users to delete the booking when cancelation happens when they are admin. ```** [Issue tacled] **: he struggles to organize the reservations as they records every bookings on paper```
 
 ## Client Approval of Success Criteria
 
