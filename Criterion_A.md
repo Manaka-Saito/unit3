@@ -25,7 +25,7 @@ KivyMD will be used to create interactive, well-designed interfaces. SQLite is t
 ## Client Approval of Success Criteria
 
 <img width="max" alt="D90E800F-8D54-49F8-A7D0-BEC269D779EE" src="https://github.com/user-attachments/assets/a3f1a254-cfc2-480b-ad8c-6e94bfb135d9" />
-
+Fig1. *Client's approval for the success criteria*
 ## Citation
 [^1]: **"Should You Use CSV, JSON, or SQL?"** *PythonHow*. [https://pythonhow.com/python-tutorial/miscellaneous/csv-json-or-sql/](https://pythonhow.com/python-tutorial/miscellaneous/csv-json-or-sql/).  
 [^2]: Nelson, Carter. **“Modern Replacements for DHT11 and DHT22 Sensors.”** *Adafruit Learning System*. [https://learn.adafruit.com/modern-replacements-for-dht11-dht22-sensors/what-are-better-alternatives](https://learn.adafruit.com/modern-replacements-for-dht11-dht22-sensors/what-are-better-alternatives).  
