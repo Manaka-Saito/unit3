@@ -12,21 +12,39 @@ Fig 1. *System Diagram of proposed solution*
 
 
 ## ER Diagram
-
-![IMG_1890 2](https://github.com/user-attachments/assets/899884a4-148c-40e5-84d7-e97ceb59330b)
+<img width="800" alt="Screenshot 2025-03-14 at 12 54 38" src="https://github.com/user-attachments/assets/f6d78fa2-0989-4bdd-8cfa-1d44911ad9ba" />
 <p>Fig 3. *ER Diagram of proposed solution*</p>
+
+## Database Pictures:
+
+1. `user` Table
+<img width="800" alt="Screenshot 2025-03-14 at 12 35 00" src="https://github.com/user-attachments/assets/00104409-8dab-410a-bd4f-e9bda027de5f" />
+  <p>Fig 4. *Database of `user`*</p>
+
+2. `employee` Table
+   <p><img width="800" alt="Screenshot 2025-03-14 at 12 38 05" src="https://github.com/user-attachments/assets/1e1f7fc9-5e21-4afe-b72f-ed73c26a108d" /></p>
+ <p>Fig 5. *Database of `employee`*</p>
+
+3. `reservation` Table
+<img width="800" alt="Screenshot 2025-03-14 at 12 42 15" src="https://github.com/user-attachments/assets/d30b372b-5598-41b8-b247-44d56b6457ad" />
+  <p>Fig 6. *Database of `reservation`*</p>
+  
+4. `availability` Table
+<img width="800" alt="Screenshot 2025-03-14 at 12 24 52" src="https://github.com/user-attachments/assets/aa1994bd-edd3-4a3e-a2c3-d09997c5e0ff" />
+  <p>Fig 7. *Database of `availability`*</p>
+
 
 ## Flow Diagrams
 
 <img width="Max" alt="Screenshot 2025-03-12 at 18 01 03" src="https://github.com/user-attachments/assets/1abe3ec1-d69a-40bd-92e6-115e6d00f8e1" />
-Fig 4. *Flow chart of `delete` method from class `BookingManagerScreen`*
+Fig 8. *Flow chart of `delete` method from class `BookingManagerScreen`*
 
 <img width="max" alt="Screenshot 2025-03-12 at 17 35 20" src="https://github.com/user-attachments/assets/e8aca7e1-2cfb-4336-b64c-9cdc5e2c85a1" />
-Fig 5. *Flow chart of `try_login` method from class `LoginScreen`*
+Fig 9. *Flow chart of `try_login` method from class `LoginScreen`*
 
 
 <img width="Max" alt="Screenshot 2025-03-12 at 19 16 37" src="https://github.com/user-attachments/assets/32b054bc-1103-403c-bfa2-d59c342e5e12" />
-Fig 6. *Flow chart of `submit_booking` method from class `BookingScreen`*
+Fig 10. *Flow chart of `submit_booking` method from class `BookingScreen`*
 
 ## Record of Tasks
 
