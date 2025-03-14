@@ -1,5 +1,10 @@
 # Criterion C
 
+## Change Made
+- Citation to the video I referred to when developing
+- Update on Techniques Used
+- Update on description for number 1, Database
+
 
 ## Techniques Used:
 
@@ -15,19 +20,49 @@
 [^1]: YouTube. (n.d.). YouTube. https://www.youtube.com/watch?v=AS3b70pLYEU 
 [^2]: YouTube. (n.d.-a). YouTube. https://www.youtube.com/watch?v=DiQ5Hni6oRI 
 
-## 1. **Database**
-To fulfill the client's request to have a sign up system, **[success criteria 1]** I firstly created a database that is connected to the python file, `main.py`. The **database** is responsible for storing the user information which is essential for creating a registeratino system. Following is the SQL command to create table:
+1. **Database**[^1]
+To fulfill the client's request to have a booking system (Success Criteria #3), I decided to create a database, ‘availability’ that is connected to the python file, `main.py`. The **database** is responsible for storing the information on availability of the seats on a specific date and time to ensure that the restaurants are capable of serving all customers instead of allowing too many users to make reservations on the same date and time that overwhelms restaurants. Following is the SQL command to complete the table:
 From `main.py`
 ```python
-table = """CREATE table if not exists user(
-   id integer primary key,
-   username text unique,
-   email text unique,
-   password varchar(256)
-   )
-   """
+conn = sqlite3.connect('user_info.db')
+cursor = conn.cursor()
 ```
-This command creates a table called `users` with the columns `id`, `username`, `email`, and `password`. The `id` is a primary key which indicates that it is always unique for each column in the table. `username` is a string that is unique which therefore prevents different users from having two different accounts with the same username which declines in security. `email` is also unique, and `password` is a string that has a maximum length of 256 characters. This is because before storing the password, it will be hashed in order to protect information from malicious users or in case of corruption in the program and information to spread. 
+First, it establishes a connection to the SQLite database, `user_info.db`. Then, it creates a cursor to enable executing SQL queries, `query`. 
+```python
+months = [1,2,3,4,5,6,7,8,9,10,11,12]
+days_per_month = {1: 31, 2: 29, 3: 31, 4: 30, 5: 31, 6: 30, 7: 31, 8: 31, 9: 30, 10: 31, 11: 30, 12: 31}
+hours_am = range(9,12)
+hours_pm = range(15, 22)
+```
+Declare variables `months` which is a list that stores each month of the year, `days_per_month` which is a dictionary that has a key of each month, and number of days corresponding to month as its item, `hours_am` a range of hours from 9 to 12 which is the operation hours in the morning, and `hours_pm` a range of hours from 15 to 22 which is the operation hours in the evening. 
+```
+for month in months:
+   for day in range(1, days_per_month[month] + 1):
+       date_str = f"2025-{month:02d}-{day:02d}"
+
+
+       for hour in hours_am:
+           time_str = f"{hour:02d}:00 AM"
+           query = "INSERT INTO availability(date, time, seat) values (?,?,?)"
+           cursor.execute(query,(date_str, time_str, 15))
+
+
+       for hour in hours_pm:
+           time_str = f"{hour:02d}:00 PM"
+           query = "INSERT INTO availability(date, time, seat) values(?,?,?)"
+           cursor.execute(query, (date_str, time_str, 15))
+
+
+# Commit the changes and close the connection
+conn.commit()
+conn.close()
+
+
+```
+Then, iteration first goes through each month stored in `month`, and inside of it, it iterates through the total number of days in that month by getting the item at the key of `month`. `date_str` is a string that stores each date in 2025 in the form of YYYY-MM-DD. Then, it starts nested loops of each `hour` in`hours_am`. Then, `time_str`, a string, stores `hour` in Standard Time format. The variable `query` stores the SQL commands to insert `date`, `time` and `seat` into the database `availability` with the values that will be replaced by the value when called, which are `date_str`, `time_str`, and 15. It executes the `query`, and inserts the new row into `availability`. After the iteration of `hours_am`, the loop of `hours_pm` begins. It repeated the same iteration, but put “PM” at the end of the string `time_str`. It commits the changes and closes the connection. 
+
+I decided to put “AM” or “PM” instead of making it military time which shortens the code although it is shorter in code, because I decided to display the available time in Standard Time format on the screen for the sake of user-friendliness, and therefore it is better to extract `time` from `availability` and contrast with the input that are the same. I ensured the user-friendliness by putting the time in a format that is easier to see.
+
 
 ## 2. **Hashing and verifying**
 **Hashing and verifying** passwords are the techniques used when storing and retrieving information into a database as indicated above. Following is the code developed to enhance the security of the application.
@@ -101,6 +136,8 @@ else:
 ```
 Firstly, it takes all the inputs from the screen interacting with the kv file and stores them into the corresponding variables, `uname`, `email`, `passwd`, `passwd_confirm`. It checks if the password inputted the first time and the second time are equal to each other. If not, the password text field that is to confirm will be highlighted and helper text displays. This avoids users registering passwords that they did not intend. Then, `check_query` stores the SQL command to search from the `user` table from `user_info.db`. Using the function `DatabaseManager` that is developed to manage the database in the other file, the variable `result` stores every element from the `user` table where the username is equal to the username inputted, or email is equal to the email inputted. If so, it will display errors by showing a red box for the username text field, and ask users to input different strings. This ensures no errors when logging into their account or any potential security risks. Third, it checks if any of the text fields are not empty to ensure nothing is missing when registering. This is done by getting the length of `passwd`, `passwd_confirm`, `uname` and `email` and multiplying each other. If the result is not equal to 0, it indicates that none of the text fields are left empty. It uses the function imported, `encrypt_password`, to hash the password before inserting information into the database, `user`. By declaring the variable, `insert_query`, and store the SQL command that inserts new columns with the values of `uname`, `email`, and `hashed_passwd` into the corresponding columns in `user`. Using the pre-developed function `run_save(query)` from `DatabaseManager`, the command is executed and stores new user’s information into the database `user`. It closes the database to prevent corruption of the database. It navigates to HomeScreen. Lastly, by checking which inputs are empty, it highlights the text box wherever the text fields are empty as to indicate what is causing the registration to not be completed.
 
+
+
 Firstly, I encountered a difficulty to deal with every possible errors, but by organizing it using if statements, I was successfully able to manage them developing to fulfill success criteria 1.
 
 Success Criteria 3: Booking Manager System
@@ -136,5 +173,4 @@ def update(self):
 ```
 It is created to update the table shown in the `BookingManagerScreen` to make it able to modify and update the table quickly allowing users to be more efficient rather than manually refreshing the table. 
 It uses the `DatabaseManager` to open the database `user_info.db` and select columns of `id`, `last_name`, `phone_num`, `reservation_time`, `reservation_date`, and `seat_type` from the table named `reservation`. Then call the methods to refresh the table by taking `None` to take every row and `data` to replace the current data as arguments. Finally, it closes the datatable to prevent corruption. 
-
 
