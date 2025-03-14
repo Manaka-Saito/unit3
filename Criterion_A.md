@@ -1,5 +1,10 @@
 ## Criteria A: Planning
 
+## Change Made
+- Proposed Solution
+- 
+
+
 ## Problem definition
 
 My client, T.L., recently opened a local restaurant named Tenzin’s Kitchen, in a town famous for sightseeing, that serves Nepalese food. Currently, he has three problems he is facing. 
@@ -9,10 +14,9 @@ Third, at the moment, he manages both his employer information on paper which re
 Lastly, he takes orders of reservations on call and records manually as he cannot afford money to employ more than 5 people. He is currently getting help from his wife, but as she is working for another job, he needs to find another way of managing reservations very soon. 
 
 ## Proposed Solution
-I propose to build a GUI application to address the client’s problems considering the future users. GUI can be quickly and easily navigated[^4]. Additionally, it does not require an internet connection; therefore, whenever the user needs to use the product, they have the ability to do so[^3].  
-For a software tool to use, I propose Python. Python is a programming language that provides open-source access, meaning it can be used by anyone as long as it is installed[^6]. It also allows for the long-term viability of the system. The use of Python simplifies potential future modifications rather than requiring the application to be rebuilt[^7].  
-KivyMD will be used to create interactive, well-designed interfaces. SQLite is the preferred data storage option, as it allows for a single codebase and is supported on a vast range of platforms. Although there are other options such as CSV files, SQLite is lightweight and well-structured, making it a suitable choice for this project[^1]. By combining Python, KivyMD, and SQLite, the solution can function smoothly and provide sufficient applications for my client.  
-
+I propose to build a GUI application that addresses the client's needs, keeping future users in mind. A GUI is easy to navigate, making it user-friendly and efficient for all users[^4]. Additionally, the application does not require an internet connection, allowing users to access it anytime they need[^3].
+For the development of this tool, I suggest using Python. Python is an open-source programming language, making it accessible for anyone to use, provided it's installed[^6]. It also ensures that the system remains functional and extentional. With Python, future updates and improvements can be implemented without the need for rebuilding applications whole[^7].
+To enhance the user experience, I will use KivyMD to create interactive and pleasing interfaces. For storing data, SQLite is the best choice, as it supports a wide range of platforms while keeping the system lightweight and well-organized. Despite the options like CSV files exist, SQLite offers a more efficient and reliable way to manage data[^1]. By combining Python, KivyMD, and SQLite, the solution will function smoothly and meet the client's requirements effectively.
 ## Success Criteria
 
 
@@ -24,8 +28,8 @@ KivyMD will be used to create interactive, well-designed interfaces. SQLite is t
 
 ## Client Approval of Success Criteria
 
-<img width="max" alt="D90E800F-8D54-49F8-A7D0-BEC269D779EE" src="https://github.com/user-attachments/assets/a3f1a254-cfc2-480b-ad8c-6e94bfb135d9" />
-Fig1. *Client's approval for the success criteria*
+Follow the link to see the client's approval.
+
 
 ## Citation
 [^1]: "Should You Use CSV, JSON, or SQL?" PythonHow. [https://pythonhow.com/python-tutorial/miscellaneous/csv-json-or-sql/](https://pythonhow.com/python-tutorial/miscellaneous/csv-json-or-sql/).  
