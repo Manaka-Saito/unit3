@@ -4,6 +4,7 @@
 - Flowchart (added end)
 - Made ER Diagram on a software
 - Updated Test Plan
+- Screenshot of database added 
 
 
 ## System Diagram
