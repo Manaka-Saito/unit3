@@ -24,5 +24,5 @@ This decision helped me understand the code truly rather than just copying what 
   1. I need more help with how to code more efficient or how to find the area of improvement in my code using techniques. In this unit, I used Youtube the find the tutorials and examples, but since many of them were published years ago which often uses the functions that are not available in kivyMd anymore.
      Therefore, I would appreciate the help with having the source where I can know the resources to use more.
   2. I need more help with the terminology to use in the documentaiton. Since I am lost in use of language, I struggles with especially writing Criterion C, explaining the functionality of the code. I would appreciate more help with these langauge use and terminology.
-  3. I need more help with how to organize the documentation more precisely. It was difficult for me to check that I have done all required elements in the documentation.
+  3. I need more help with the justification on the proposed solution. Since I haven't learned which language or tools are the best for developing applications or what other options are there. I struggle to find the proper alternatives and compare then with the one I used to write in the justification of proposed solution. 
  
