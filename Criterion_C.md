@@ -11,6 +11,9 @@
 6. UI Components (KivyMD)
 7. Code Optimization
 
+## Citation
+[^1]: YouTube. (n.d.). YouTube. https://www.youtube.com/watch?v=AS3b70pLYEU 
+[^2]: YouTube. (n.d.-a). YouTube. https://www.youtube.com/watch?v=DiQ5Hni6oRI 
 
 ## 1. **Database**
 To fulfill the client's request to have a sign up system, **[success criteria 1]** I firstly created a database that is connected to the python file, `main.py`. The **database** is responsible for storing the user information which is essential for creating a registeratino system. Following is the SQL command to create table:
