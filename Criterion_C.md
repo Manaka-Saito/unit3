@@ -84,7 +84,7 @@ def encrypt_password(in_password:str):
 ```
 It imports the Python library, `passlib` and uses a hashing algorithm `sha256_crypt` to hash and verify. `hash_function` indicates that the program uses `sha256_crypt` hash with 30,000 rounds of computation while `pwd_config` is a `CryptContext` object to manage the password hashing and verification. First function takes `input_str`, a string, and `hash`, a string, as arguments, and returns a boolean if the `input_str` and `hash` matches. If they match, it returns True while it returns False if they don’t match. Second function takes `in_password`, a string, as an argument, and returns hashed `in_password` by using `hash_function`. 
 
-## 3. **Functions** / **If Statement** / **Database**
+## 3. **Functions**
 Utilizing those techniques(`database` and `hashing and verifying`), I developed a registration function within `SingUpScreen` using python. 
 From `main.py`
 ```python
@@ -142,7 +142,7 @@ Firstly, I encountered a difficulty to deal with every possible errors, but by o
 
 Success Criteria 3: Booking Manager System
 
-## 4. **Function** / **Iteration** / **If Statements**
+## 4. **Iteration**[^2]
 As per success criteria **[success criteria 5]**, the application needs to allow the user to book a table for a restaurant. To address this, I decided to create a function interacting with the kv file within the `BookingManagerScreen` which is only accessible to admin users. 
 From `main.py`:
 ```python
