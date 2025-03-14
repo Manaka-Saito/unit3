@@ -2,7 +2,7 @@
 
 ## Change Made
 - Proposed Solution
-- 
+- Appendix.pdf
 
 
 ## Problem definition
