@@ -1,11 +1,17 @@
 # Criteria B 
 
+## Change Made
+- Flowchart (added end)
+- Made ER Diagram on a software
+- Updated Test Plan
+
+
 ## System Diagram
 
 <img width="max" alt="Screenshot 2025-03-11 at 22 52 11" src="https://github.com/user-attachments/assets/4ab179c7-bb5a-4d63-9358-a36a24febf5f" />
 Fig 1. *System Diagram of proposed solution*
 
-## UML Diagram 
+## UML Diagram (Not required)
 
 ![IMG_1889](https://github.com/user-attachments/assets/ae63417a-0f97-4114-b36c-bf5024498bcf)
 <p>Fig 2. *UML Diagram of proposed solution*</p>
