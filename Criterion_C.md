@@ -3,14 +3,13 @@
 
 ## Techniques Used:
 
-1. If statements ()
-2. For loops and While loops for iterating data
-3. Hashing and verifying for passwords to protect the personal information
-4. Functions to make the application interactive and functional
-5. Database to store and retrieve data
-6. Input validation 
-7. Widgets
-8. DatabaseManager
+1. Object-Oriented Programming (OOP)
+2. Event-Driven Programming
+3. GUI Navigation 
+4. Input Validation
+5. SQlite (Database operation)
+6. UI Components (KivyMD)
+7. Code Optimization
 
 
 ## 1. **Database**
